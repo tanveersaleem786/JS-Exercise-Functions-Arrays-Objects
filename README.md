@@ -1,3 +1,4 @@
+# Tanveer Saleem
 # Objects, Functions and Arrays
 
 This challenge focuses on functions, objects and arrays. You'll convert "traditional" functions into functions that use the ES6 arrow syntax. You'll also manipulate objects and traverse arrays.
