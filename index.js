@@ -37,8 +37,13 @@ function exampleFunction(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id, name, email) {
+   const person = {
+                    id: id, 
+                    name: name, 
+                    email: email
+                  };
+    return person;
 }
 
 /**
@@ -54,8 +59,9 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(person) {
+  
+   return 'Hello, my name is '+person.name;
 }
 
 /**
@@ -71,8 +77,15 @@ function getName(/* code here */) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
-  /* code here */
+function makeSmartPerson(name) {
+
+    const person = {
+                     name: name,
+                     sum: function(num1, num2) { return num1+num2;},
+                     speak: function() { return `Hello, my name is ${name}`}
+                    };
+    return person;
+  
 }
 
 /**
@@ -87,8 +100,10 @@ function makeSmartPerson(/* code here */) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoByIndex(/* code here */) {
-  /* code here */
+function getCarInfoByIndex(array, i) {
+
+  return 'This is a '+ array[i].car_make + array[i].car_model;
+
 }
 
 /**
@@ -102,8 +117,8 @@ function getCarInfoByIndex(/* code here */) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
+function getLastCarInfo(array) {  
+  return `This is a  {array[array.length-1].car_make  array[array.length-1].car_model}`;
 }
 
 /**
