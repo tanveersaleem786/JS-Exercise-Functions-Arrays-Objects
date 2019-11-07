@@ -81,8 +81,8 @@ function makeSmartPerson(name) {
 
     const person = {
                      name: name,
-                     sum: function(num1, num2) { return num1+num2;},
-                     speak: function() { return `Hello, my name is ${name}`}
+                     sum: (num1, num2) => num1+num2,
+                     speak: () =>  `Hello, my name is ${name}`
                     };
     return person;
   
@@ -135,8 +135,14 @@ function getLastCarInfo(array) {
 */
 function getCarInfoById(array,id) {
 
-    const getCar = array.find(array => array.id === id);
-    return `This is a  ${getCar.car_make}  ${getCar.car_model}`;
+    //const getCar = array.find(array => array.id === id);
+    const length = array.length;
+    for(let i=0; i<length; i++) {
+
+      if(array[i].id === id)
+       return `This is a  ${array[i].car_make}  ${array[i].car_model}`;
+
+    }
 }
 
 
@@ -174,14 +180,14 @@ function sortCarInventory(array) {
 */
 function getModelYears(array) {
 
-  const getModelYears = [];
+  const modelYears = [];
 
   for(let i = 0; i < array.length; i++)
   {
-    getModelYears.push(array[i].car_year);
+    modelYears.push(array[i].car_year);
   }
 
-  return getModelYears;
+  return modelYears;
 }
 
 /**
@@ -254,15 +260,12 @@ function getGermanCars(array) {
  *   return num * 2
  * }
 */
-const sum = (a,b) => {
-  return a+b;
-}
-const addFive = (num) => {
-  return num+5;
-}
-const argTimesTwo = (num) => {
-  return num*2;
-}
+const sum = (a,b) => a+b;
+
+const addFive = (num) => num+5;
+
+const argTimesTwo = (num) => num*2;
+
 
 /**
  * ### Challenge `carMaker`
